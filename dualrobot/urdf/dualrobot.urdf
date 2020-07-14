@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="dualrobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="4.4409E-16 0 0.25"
+        rpy="0 0 0" />
+      <mass
+        value="9570.8" />
+      <inertia
+        ixx="3258.8"
+        ixy="-5.9212E-14"
+        ixz="-4.811E-14"
+        iyy="73725"
+        iyz="3.7007E-15"
+        izz="76585" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L1_1">
+    <inertial>
+      <origin
+        xyz="0 0.1958 0"
+        rpy="0 0 0" />
+      <mass
+        value="267.09" />
+      <inertia
+        ixx="21.726"
+        ixy="6.3316E-16"
+        ixz="6.467E-15"
+        iyy="29.91"
+        iyz="4.2913E-15"
+        izz="21.479" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L1_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L1_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1_1"
+    type="continuous">
+    <origin
+      xyz="-4 0 0.5"
+      rpy="1.5708 0 -0.011722" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1_1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="L2_1">
+    <inertial>
+      <origin
+        xyz="0.75 -2.1316E-14 0.11501"
+        rpy="0 0 0" />
+      <mass
+        value="118.93" />
+      <inertia
+        ixx="1.6727"
+        ixy="8.1857E-13"
+        ixz="4.4843E-15"
+        iyy="30.43"
+        iyz="6.6613E-16"
+        izz="31.31" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L2_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L2_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2_1"
+    type="continuous">
+    <origin
+      xyz="0.084991 0.65 0"
+      rpy="1.5708 0.58096 1.5708" />
+    <parent
+      link="L1_1" />
+    <child
+      link="L2_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="L3_1">
+    <inertial>
+      <origin
+        xyz="0.75 -1.3323E-14 -0.084991"
+        rpy="0 0 0" />
+      <mass
+        value="118.93" />
+      <inertia
+        ixx="1.6727"
+        ixy="4.7462E-13"
+        ixz="1.5762E-14"
+        iyy="30.43"
+        iyz="-8.743E-16"
+        izz="31.31" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L3_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L3_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3_1"
+    type="continuous">
+    <origin
+      xyz="1.5 0 0"
+      rpy="0 0 -1.5496" />
+    <parent
+      link="L2_1" />
+    <child
+      link="L3_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="L4_1">
+    <inertial>
+      <origin
+        xyz="0.12377 3.5527E-15 0.10645"
+        rpy="0 0 0" />
+      <mass
+        value="33.037" />
+      <inertia
+        ixx="0.46506"
+        ixy="-1.0538E-14"
+        ixz="-9.0128E-15"
+        iyy="0.89811"
+        iyz="2.9785E-17"
+        izz="1.1455" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L4_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L4_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4_1"
+    type="continuous">
+    <origin
+      xyz="1.5 0 0.0085551"
+      rpy="0 0 0.56147" />
+    <parent
+      link="L3_1" />
+    <child
+      link="L4_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="L5_1">
+    <inertial>
+      <origin
+        xyz="8.3267E-17 0.131 -5.3291E-15"
+        rpy="0 0 0" />
+      <mass
+        value="24.653" />
+      <inertia
+        ixx="0.54542"
+        ixy="7.3726E-17"
+        ixz="-3.4377E-15"
+        iyy="0.47751"
+        iyz="7.3369E-15"
+        izz="0.67568" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L5_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L5_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5_1"
+    type="continuous">
+    <origin
+      xyz="0.40009 0 0.10645"
+      rpy="0 -1.5591 -1.5708" />
+    <parent
+      link="L4_1" />
+    <child
+      link="L5_1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="L1_2">
+    <inertial>
+      <origin
+        xyz="1.7764E-15 0.1958 0"
+        rpy="0 0 0" />
+      <mass
+        value="267.09" />
+      <inertia
+        ixx="21.726"
+        ixy="-1.0688E-15"
+        ixz="-5.107E-15"
+        iyy="29.91"
+        iyz="2.5849E-15"
+        izz="21.479" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L1_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L1_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1_2"
+    type="continuous">
+    <origin
+      xyz="4 0 0.5"
+      rpy="1.5708 0 -0.050394" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1_2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="L2_2">
+    <inertial>
+      <origin
+        xyz="0.75 -3.5527E-14 0.16451"
+        rpy="0 0 0" />
+      <mass
+        value="118.93" />
+      <inertia
+        ixx="1.6727"
+        ixy="1.2454E-12"
+        ixz="-6.9787E-13"
+        iyy="30.43"
+        iyz="-1.3656E-14"
+        izz="31.31" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L2_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L2_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2_2"
+    type="continuous">
+    <origin
+      xyz="0.035493 0.65 0"
+      rpy="1.5708 0.58231 1.5708" />
+    <parent
+      link="L1_2" />
+    <child
+      link="L2_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="L3_2">
+    <inertial>
+      <origin
+        xyz="0.42368 4.0412E-14 0.035493"
+        rpy="0 0 0" />
+      <mass
+        value="71.405" />
+      <inertia
+        ixx="0.93723"
+        ixy="-3.2305E-13"
+        ixz="1.4866E-13"
+        iyy="8.6749"
+        iyz="1.6778E-14"
+        izz="9.163" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L3_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dualrobot/meshes/L3_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3_2"
+    type="continuous">
+    <origin
+      xyz="1.5 0 0"
+      rpy="-3.1416 0 -1.4882" />
+    <parent
+      link="L2_2" />
+    <child
+      link="L3_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+  <link name="world" />
+  <joint name="world_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+
+  <transmission name="trans_base_link_to_L1_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J1_1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="base_link_to_L1_1_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_L1_1_to_L2_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J2_1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="L1_1_to_L2_1_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_L2_1_to_L3_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J3_1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="L2_1_to_L3_1_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_L3_1_to_L4_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J4_1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="L3_1_to_L4_1_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_L4_1_to_L5_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J5_1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="L4_1_to_L5_1_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_base_link_to_L1_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J1_2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="base_link_to_L1_2_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_L1_2_to_L2_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J2_2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="L1_2_to_L2_2_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_L2_2_to_L3_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J3_2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="L2_2_to_L3_2_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo>
+    <mu1>50.0</mu1>
+    <mu2>100.0</mu2>
+    <minDepth>0.003</minDepth>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+</robot>

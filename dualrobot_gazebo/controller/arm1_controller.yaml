@@ -1,0 +1,10 @@
+arm1_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - J1_1
+    - J2_1
+    - J3_1
+    - J4_1
+    - J5_1
+  state_publish_rate: 25
+  action_monitor_rate: 10
